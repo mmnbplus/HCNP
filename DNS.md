@@ -86,3 +86,4 @@ Aliases:  www.baidu.com
 ![1595211503172](F:\华为网络证书\HCNP\DNS.assets\1595211503172.png)
 
 我们可以看到DNS抓的包
+
