@@ -1,5 +1,9 @@
  https://www.bilibili.com/video/BV1Dg4y187bZ?p=14 
 
+ https://www.bilibili.com/video/BV1Dg4y187bZ?p=15
+
+ https://www.bilibili.com/video/BV1Dg4y187bZ?p=16 
+
 # IP因特网协议
 
 ## 前言
@@ -85,4 +89,10 @@
   ```
 
   为什么会出来星号？因为某些设备出来PING保护
+
+### ENSP的安装
+
+打开运行	F:\华为网络证书\安装包\软件\eNSP_Setup.exe
+
+### TTL防环机制
 
