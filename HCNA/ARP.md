@@ -29,9 +29,48 @@ arp -d
 
 ### ARP抓包
 
+交换机关闭disable
+
+```bash
+stp disable
+```
+
 目标MAC	ff:ff:ff:ff:ff:ff	=》广播 	在一个广播域里面的所有人都会收到
 
 ![1595468817945](ARP.assets/1595468817945.png)
 
 ![1595469209186](ARP.assets/1595469209186.png)
 
+### ARP欺骗：攻击者发送"无故ARP响应"来伪装其他设备
+
+![1595475146802](ARP.assets/1595475146802.png)
+
+```
+PC>ping 1.0.0.2
+
+Ping 1.0.0.2: 32 data bytes, Press Ctrl_C to break
+From 1.0.0.2: bytes=32 seq=1 ttl=128 time=47 ms
+From 1.0.0.2: bytes=32 seq=2 ttl=128 time=31 ms
+From 1.0.0.2: bytes=32 seq=3 ttl=128 time=31 ms
+From 1.0.0.2: bytes=32 seq=4 ttl=128 time=32 ms
+From 1.0.0.2: bytes=32 seq=5 ttl=128 time=47 ms
+
+--- 1.0.0.2 ping statistics ---
+  5 packet(s) transmitted
+  5 packet(s) received
+  0.00% packet loss
+  round-trip min/avg/max = 31/37/47 ms
+
+PC>arp -a
+
+Internet Address    Physical Address    Type
+1.0.0.2             00-00-00-00-00-03   dynamic
+
+PC>
+```
+
+此时	1.0.0.2             00-00-00-00-00-03   dynamic
+
+arp只保存最新的
+
+![1595475280896](ARP.assets/1595475280896.png)
