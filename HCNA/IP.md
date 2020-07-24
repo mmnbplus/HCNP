@@ -4,6 +4,8 @@
 
  https://www.bilibili.com/video/BV1Dg4y187bZ?p=16 
 
+ https://www.bilibili.com/video/BV1Dg4y187bZ?p=17
+
 # IP因特网协议
 
 ## 前言
@@ -90,9 +92,38 @@
 
   为什么会出来星号？因为某些设备出来PING保护
 
+**协议号**：用于标识上层协议
+
+协议号对应的数字
+
+![1595614977683](IP.assets/1595614977683.png)
+
+
+
 ### ENSP的安装
 
 打开运行	F:\华为网络证书\安装包\软件\eNSP_Setup.exe
 
 ### TTL防环机制
 
+```bash
+sys
+sys R1
+int g0/0/0
+ip add 12.0.0.1 24
+ip route-s 8.8.8.8 32 12.0.0.2
+```
+
+```bash
+sys
+sys R2
+int g0/0/0
+ip add 12.0.0.2 24
+ip route-s 8.8.8.8 32 12.0.0.1
+```
+
+```
+tracert 8.8.8.8
+```
+
+![1595613187565](IP.assets/1595613187565.png)
