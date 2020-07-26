@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="F407CCD6-D8F3-4d7f-8DEA-309E840C3CDF" name="AR2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-85-6D-40" com_port="5000" bootmode="0" cx="303.000000" cy="214.000000" edit_left="330" edit_top="268">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines />
+    <shapes />
+    <txttips />
+</topo>
