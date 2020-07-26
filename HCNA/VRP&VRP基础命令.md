@@ -46,4 +46,50 @@
 | 接口视图(配置接口参数)       | [Huawei-LoopBack1] | interface lo 1(int lo 1) |
 | 协议视图(配置路由协议)       |                    | ip add 1.0.0.1 24        |
 
-为什么你打	我是老司机	很快？打命令很慢？
+为什么你打	**我是老司机**	很快？打命令很慢？
+
+- 青铜：打全
+- 黄金：Tab
+- 大师：缩写
+- 王者：敲白板
+
+```bash
+<Huawei>sys
+Enter system view, return user view with Ctrl+Z.
+[Huawei]int lo 1
+[Huawei-LoopBack1]ip address 1.0.0.1 24
+[Huawei]dis his			##查看历史命令
+  sys
+[Huawei]
+[Huawei]dis his
+  q
+  int lo 2
+  int lo 1
+  sys
+  dis his
+[Huawei]dis int brief 	##查看所有接口的利用率
+PHY: Physical
+*down: administratively down
+(l): loopback
+(s): spoofing
+(b): BFD down
+^down: standby
+(e): ETHOAM down
+(d): Dampening Suppressed
+InUti/OutUti: input utility/output utility
+Interface                   PHY   Protocol InUti OutUti   inErrors  outErrors
+Ethernet0/0/0               down  down        0%     0%          0          0
+Ethernet0/0/1               down  down        0%     0%          0          0
+Ethernet0/0/2               down  down        0%     0%          0          0
+Ethernet0/0/3               down  down        0%     0%          0          0
+Ethernet0/0/4               down  down        0%     0%          0          0
+Ethernet0/0/5               down  down        0%     0%          0          0
+Ethernet0/0/6               down  down        0%     0%          0          0
+Ethernet0/0/7               down  down        0%     0%          0          0
+Ethernet0/0/8               down  down        0%     0%          0          0
+LoopBack1                   up    up(s)       0%     0%          0          0
+LoopBack2                   up    up(s)       0%     0%          0          0
+NULL0                       up    up(s)       0%     0%          0          0
+[Huawei]
+```
+
