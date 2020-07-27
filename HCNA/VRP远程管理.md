@@ -160,6 +160,8 @@ return
 [Huawei-ui-vty0-4]
 
 ##### aaa模式
+[Huawei]user-interface vty 0 4					  ## 进入VTY
+[Huawei-ui-vty0-4]authentication-mode aaa		    ##修改模式为aaa
 [Huawei]aaa										 ## 进入3A模式
 [Huawei-aaa]local-user mm password ci			  
 [Huawei-aaa]local-user mm password cipher mm123456	## 增加用户
