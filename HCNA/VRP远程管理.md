@@ -63,6 +63,10 @@ return
 | set authentication password cipher huawei | 配置认证密码        |
 | user privilege level 15                   | 配置用户级别        |
 | user-interface maximum-vty 15             | 配置最大VTY会话数量 |
+| aaa                                       | 进入AAA配置模式     |
+| local-user wakin password cipher huawei   | 创建用户和密码      |
+| local-user wakin privilege level 15       | 配置用户级别        |
+| local-user wakin service type telnet      | 配置用户可用服务    |
 |                                           |                     |
 
 ```bash
@@ -155,7 +159,31 @@ user-interface vty 16 20
 return
 [Huawei-ui-vty0-4]
 
-### aaa模式
+##### aaa模式
+[Huawei]aaa										 ## 进入3A模式
+[Huawei-aaa]local-user mm password ci			  
+[Huawei-aaa]local-user mm password cipher mm123456	## 增加用户
+Info: Add a new user.
+[Huawei-aaa]local-user mm privilege level 15		## 设置级别
+[Huawei-aaa]local-user mm service-type telnet		## 设置可用服务类型(可多选)
+[Huawei-aaa]
+[Huawei-aaa]dis this							  ##查看当前配置
+[V200R003C00]
+#
+aaa 
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default 
+ domain default_admin 
+ local-user mm password cipher %$%$`puZ*AQ2a,uc/'NO\iG)UXCc%$%$
+ local-user mm privilege level 15
+ local-user mm service-type telnet
+ local-user admin password cipher %$%$K8m.Nt84DZ}e#<0`8bmE3Uw}%$%$
+ local-user admin service-type http
+#
+return
+[Huawei-aaa]
 
 ```
 
