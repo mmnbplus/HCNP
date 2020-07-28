@@ -92,12 +92,49 @@ Remove directory flash:/mm666? (y/n)[n]:y
 <Huawei>reset recycle-bin 		 ## 清空回收站
 Error: File can't be found
 <Huawei>
+<Huawei>mkdir mm666				## 重命名文件演示-新建文件夹
+Info: Create directory flash:/mm666......Done
+<Huawei>rename mm				
+<Huawei>rename mm666 m6m6		## 重命名文件演示-重命名文件
+Rename flash:/mm666 to flash:/m6m6? (y/n)[n]:y
+Info: Rename file flash:/mm666 to flash:/m6m6 ......Done
+<Huawei>dir						## 重命名文件演示-查看结果
+Directory of flash:/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  drw-              -  Jul 28 2020 02:52:54   dhcp
+    1  -rw-        121,802  May 26 2014 09:20:58   portalpage.zip
+    2  -rw-          2,263  Jul 28 2020 02:52:50   statemach.efs
+    3  -rw-        828,482  May 26 2014 09:20:58   sslvpn.zip
+    4  drw-              -  Jul 28 2020 05:44:29   m6m6
+
+1,090,732 KB total (784,460 KB free)
+<Huawei>					
+<Huawei>copy dhcp-duid.txt mm123.txt		## 文件复制
+Copy flash:/dhcp/dhcp-duid.txt to flash:/dhcp/mm123.txt? (y/n)[n]:y
+100%  complete
+Info: Copied file flash:/dhcp/dhcp-duid.txt to flash:/dhcp/mm123.txt...Done
+<Huawei>dir								## 查看效果
+Directory of flash:/dhcp/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  -rw-             98  Jul 28 2020 02:52:54   dhcp-duid.txt
+    1  -rw-             98  Jul 28 2020 05:49:25   mm123.txt
+
+1,090,732 KB total (784,452 KB free)
+<Huawei>
+<Huawei>delete mm123.txt 				## 删除文件
+Delete flash:/dhcp/mm123.txt? (y/n)[n]:y
+Info: Deleting file flash:/dhcp/mm123.txt...succeed.
+<Huawei>
 
 
 
 
 
 ```
+
+![1595915647692](VRP文件系统.assets/1595915647692.png)
 
 
 
