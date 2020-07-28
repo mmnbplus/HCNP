@@ -96,6 +96,73 @@ FTP: 120 byte(s) sent in 0.370 second(s) 324.32byte(s)/sec.
 FTP: 995 byte(s) received in 0.440 second(s) 2.26Kbyte(s)/sec.
 
 [Huawei-ftp]q									## 退出
+<Huawei>dis startup								##查看启动配置
+MainBoard: 
+  Startup system software:                   null
+  Next startup system software:              null
+  Backup system software for next startup:   null
+  Startup saved-configuration file:          null
+  Next startup saved-configuration file:     flash:/vrpcfg.zip
+  Startup license file:                      null
+  Next startup license file:                 null
+  Startup patch package:                     null
+  Next startup patch package:                null
+  Startup voice-files:                       null
+  Next startup voice-files:                  null
+<Huawei>startup system-software sd1:aaa.cc		## 更改system-software
+...
+...
+...
+<Huawei>startup saved-configuration flash:/newvrpcfg.cfg
+This operation will take several minutes, please wait....
+Info: Succeeded in setting the file for booting system
+<Huawei>
+<Huawei>dis startup 							## 查看startup
+MainBoard: 
+  Startup system software:                   null
+  Next startup system software:              null
+  Backup system software for next startup:   null
+  Startup saved-configuration file:          null
+  Next startup saved-configuration file:     flash:/newvrpcfg.cfg
+  Startup license file:                      null
+  Next startup license file:                 null
+  Startup patch package:                     null
+  Next startup patch package:                null
+  Startup voice-files:                       null
+  Next startup voice-files:                  null
+<Huawei>reboot									## 重启
+Info: The system is comparing the configuration, please wait.
+Warning: All the configuration will be saved to the next startup configuration. 
+Continue ? [y/n]:n
+System will reboot! Continue ? [y/n]:y
+Info: system is rebooting ,please wait...
+<Huawei>
+Task FECD Init......Ok
+Task MFPI Init......Ok
+Task GVRP Init......Ok
+Task ADPG Init......Ok
+
+
+  Press any key to get started
+
+<Huawei>
+#### 我改的是g0/0/1的IP地址
+ [Huawei]dis ip int br
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+The number of interface that is UP in Physical is 2
+The number of interface that is DOWN in Physical is 2
+The number of interface that is UP in Protocol is 2
+The number of interface that is DOWN in Protocol is 2
+
+Interface                         IP Address/Mask      Physical   Protocol  
+GigabitEthernet0/0/0              unassigned           down       down      
+GigabitEthernet0/0/1              192.168.3.41/24      up         up        
+GigabitEthernet0/0/2              unassigned           down       down      
+NULL0                             unassigned           up         up(s)     
+[Huawei]
 
 
 ```
