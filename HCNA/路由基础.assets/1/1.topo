@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="D87EB8DC-100A-47c9-8AA6-8035BA4E6684" name="LSW1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-F5-22-47" com_port="2000" bootmode="1" cx="216.000000" cy="176.000000" edit_left="243" edit_top="230">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+    </devices>
+    <lines />
+    <shapes />
+    <txttips />
+</topo>
