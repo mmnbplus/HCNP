@@ -1,0 +1,108 @@
+ https://www.bilibili.com/video/BV1Dg4y187bZ?p=26 
+
+# VRP文件系统
+
+### 前言
+
+华为网络设备设备的配置文件和VRP系统文件都保存在物理存储介质中，所以文件系统是VRP正常运行的基础。只有掌握了对文件系统的基础操作，网络工程师才能对设备的配置文件和VRP系统文件进行高效的管理。
+
+![1595909916946](VRP文件系统.assets/1595909916946.png)
+
+```bash
+[Huawei]dis version 
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.130 (AR2200 V200R003C00)
+Copyright (C) 2011-2012 HUAWEI TECH CO., LTD
+Huawei AR2220 Router uptime is 0 week, 0 day, 1 hour, 31 minutes
+BKP 0 version information: 
+1. PCB      Version  : AR01BAK2A VER.NC
+2. If Supporting PoE : No
+3. Board    Type     : AR2220
+4. MPU Slot Quantity : 1
+5. LPU Slot Quantity : 6
+
+MPU 0(Master) : uptime is 0 week, 0 day, 1 hour, 31 minutes
+
+### 虚拟机好像没有
+
+MPU version information : 
+1. PCB      Version  : AR01SRU2A VER.A
+2. MAB      Version  : 0
+3. Board    Type     : AR2220
+4. BootROM  Version  : 0
+
+[Huawei]
+```
+
+![1595910691996](VRP文件系统.assets/1595910691996.png)
+
+```bash
+<Huawei>dir				## 查看当前目录中的文件	 	
+Directory of flash:/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  drw-              -  Jul 28 2020 02:52:54   dhcp
+    1  -rw-        121,802  May 26 2014 09:20:58   portalpage.zip
+    2  -rw-          2,263  Jul 28 2020 02:52:50   statemach.efs
+    3  -rw-        828,482  May 26 2014 09:20:58   sslvpn.zip
+
+1,090,732 KB total (784,464 KB free)
+<Huawei>cd dhcp/ 		## 进入dhcp文件夹
+<Huawei>dir 			## 查看dhcp文件夹信息
+Directory of flash:/dhcp/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  -rw-             98  Jul 28 2020 02:52:54   dhcp-duid.txt
+
+1,090,732 KB total (784,464 KB free)
+<Huawei>more dhcp-duid.txt 		## 查看dhcp文件内容
+*Huawei DHCP DUID*
+*time* 2020-07-28 10:52:54
+*version* 1
+#DUID_LL: 0003000100E0FC1463AC
+*end*
+<Huawei>cd ..					## 退出当前文件夹
+<Huawei>dir						## 查看退出效果
+Directory of flash:/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  drw-              -  Jul 28 2020 02:52:54   dhcp
+    1  -rw-        121,802  May 26 2014 09:20:58   portalpage.zip
+    2  -rw-          2,263  Jul 28 2020 02:52:50   statemach.efs
+    3  -rw-        828,482  May 26 2014 09:20:58   sslvpn.zip
+
+1,090,732 KB total (784,464 KB free)
+<Huawei>					
+<Huawei>mkdir mm666				 ## 创建文件夹
+Info: Create directory flash:/mm666......Done
+<Huawei>dir						## 查看创建效果
+Directory of flash:/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  drw-              -  Jul 28 2020 04:44:18   mm666
+    1  drw-              -  Jul 28 2020 02:52:54   dhcp
+    2  -rw-        121,802  May 26 2014 09:20:58   portalpage.zip
+    3  -rw-          2,263  Jul 28 2020 02:52:50   statemach.efs
+    4  -rw-        828,482  May 26 2014 09:20:58   sslvpn.zip
+
+1,090,732 KB total (784,460 KB free)
+<Huawei>rmdir mm666				## 删除文件夹
+Remove directory flash:/mm666? (y/n)[n]:y
+%Removing directory flash:/mm666...Done!
+<Huawei>reset recycle-bin 		 ## 清空回收站
+Error: File can't be found
+<Huawei>
+
+
+
+
+
+```
+
+
+
+### 扩展知识
+
+windows回收站
+
+![1595911979941](VRP文件系统.assets/1595911979941.png)
