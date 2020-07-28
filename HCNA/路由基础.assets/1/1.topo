@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UNICODE" ?>
 <topo version="1.2.00.510">
     <devices>
-        <dev id="D87EB8DC-100A-47c9-8AA6-8035BA4E6684" name="LSW1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-F5-22-47" com_port="2000" bootmode="1" cx="216.000000" cy="176.000000" edit_left="243" edit_top="230">
+        <dev id="F617C5BB-31E3-4c98-B772-62AD83B9522C" name="PC1" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-87-66-B2  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-87-66-B2" com_port="0" bootmode="0" cx="402.000000" cy="234.000000" edit_left="429" edit_top="288">
             <slot number="slot17" isMainBoard="1">
-                <interface sztype="Ethernet" interfacename="GE" count="24" />
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="28AFB5F2-120A-484d-8D27-1CCA66309E83" name="AR1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-0B-22-C4" com_port="5000" bootmode="0" cx="194.000000" cy="238.000000" edit_left="221" edit_top="292">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
             </slot>
         </dev>
     </devices>
-    <lines />
+    <lines>
+        <line srcDeviceID="F617C5BB-31E3-4c98-B772-62AD83B9522C" destDeviceID="28AFB5F2-120A-484d-8D27-1CCA66309E83">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="385.824219" srcBoundRect_Y="261.830292" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="264.175781" tarBoundRect_Y="264.169708" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
     <shapes />
     <txttips />
 </topo>
