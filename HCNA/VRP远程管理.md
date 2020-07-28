@@ -66,7 +66,7 @@ return
 | aaa                                       | 进入AAA配置模式     |
 | local-user wakin password cipher huawei   | 创建用户和密码      |
 | local-user wakin privilege level 15       | 配置用户级别        |
-| local-user wakin service type telnet      | 配置用户可用服务    |
+| local-user wakin service-type telnet      | 配置用户可用服务    |
 |                                           |                     |
 
 ```bash
@@ -227,7 +227,17 @@ return
 
 ```
 
+ENSP通过回环网卡连接真机
 
+![1595899466662](VRP远程管理.assets/1595899466662.png)
+
+一直下一步到这个界面
+
+![1595899530570](VRP远程管理.assets/1595899530570.png)
+
+重命名网卡
+
+![1595899627418](VRP远程管理.assets/1595899627418.png)
 
 ```bash
 ## 真机请尽量不用使用这个命令

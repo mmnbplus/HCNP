@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UNICODE" ?>
 <topo version="1.2.00.510">
     <devices>
-        <dev id="3AF58397-85CC-434a-A02D-949CD7172A1E" name="LSW1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-BD-09-6C" com_port="5001" bootmode="0" cx="324.000000" cy="183.000000" edit_left="351" edit_top="237">
-            <slot number="slot17" isMainBoard="1">
-                <interface sztype="Ethernet" interfacename="GE" count="24" />
-            </slot>
-        </dev>
         <dev id="FAAA2CF5-F8E1-488c-8AC1-3623777CF5FA" name="AR1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-14-63-AC" com_port="5000" bootmode="0" cx="102.000000" cy="186.000000" edit_left="129" edit_top="240">
             <slot number="slot17" isMainBoard="1">
                 <interface sztype="Ethernet" interfacename="GE" count="1" />
                 <interface sztype="Ethernet" interfacename="GE" count="2" />
             </slot>
         </dev>
-        <dev id="B58B8E93-C16F-4aec-ACEA-BCBAEE4FFCAE" name="PC1" poe="0" model="PC" settings=" -simpc_ip 192.168.4.2  -simpc_mask 255.255.255.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-1B-43-3D  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-1B-43-3D" com_port="0" bootmode="0" cx="537.000000" cy="185.000000" edit_left="564" edit_top="239">
+        <dev id="1B85A895-DB1D-4bd0-A588-039C69A11328" name="loud1" poe="0" model="Cloud" settings="" system_mac="" com_port="0" bootmode="0" cx="276.500000" cy="159.500000" edit_left="319" edit_top="244">
             <slot number="slot17" isMainBoard="1">
-                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+                <interface sztype="Ethernet" interfacename="Ethernet" count="2" />
+                <interface sztype="Ethernet" interfacename="GE" count="0" />
+                <interface sztype="Serial" interfacename="Serial" count="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="1" remoteDisplayNo="2" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="2" remoteDisplayNo="1" adapterUid="\Device\NPF_{AA9B2A99-30E2-4943-9674-C67F7743A4F4}" isOpen="1" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
             </slot>
         </dev>
     </devices>
     <lines>
-        <line srcDeviceID="3AF58397-85CC-434a-A02D-949CD7172A1E" destDeviceID="B58B8E93-C16F-4aec-ACEA-BCBAEE4FFCAE">
-            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="394.181854" srcBoundRect_Y="210.405457" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="520.818115" tarBoundRect_Y="211.594543" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
-        </line>
-        <line srcDeviceID="3AF58397-85CC-434a-A02D-949CD7172A1E" destDeviceID="FAAA2CF5-F8E1-488c-8AC1-3623777CF5FA">
-            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="307.820190" srcBoundRect_Y="210.583511" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="172.179825" tarBoundRect_Y="212.416489" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        <line srcDeviceID="1B85A895-DB1D-4bd0-A588-039C69A11328" destDeviceID="FAAA2CF5-F8E1-488c-8AC1-3623777CF5FA">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="254.710678" srcBoundRect_Y="205.722015" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="172.111572" tarBoundRect_Y="210.504074" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
         </line>
     </lines>
     <shapes />
