@@ -187,6 +187,44 @@ aaa
 return
 [Huawei-aaa]
 
+
+####  删除账号
+[Huawei-aaa]local-user test password cipher test123
+Info: Add a new user.
+[Huawei-aaa]undo local-user test					## 删除
+[Huawei-aaa]dis this
+[V200R003C00]
+#
+aaa 
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default 
+ domain default_admin 
+ local-user mm password cipher %$%$`puZ*AQ2a,uc/'NO\iG)UXCc%$%$
+ local-user mm privilege level 15
+ local-user mm service-type telnet
+ local-user admin password cipher %$%$K8m.Nt84DZ}e#<0`8bmE3Uw}%$%$
+ local-user admin service-type http
+#
+return
+[Huawei-aaa]
+
+#### 服务类型大全
+[Huawei-aaa]local-user mm service-type ?
+  8021x     802.1x user
+  bind      Bind authentication user
+  ftp       FTP user
+  http      Http user
+  ppp       PPP user
+  ssh       SSH user
+  sslvpn    Sslvpn user
+  telnet    Telnet  user
+  terminal  Terminal user
+  web       Web authentication user
+  x25-pad   X25-pad user
+[Huawei-aaa]local-user mm service-type 
+
 ```
 
 
