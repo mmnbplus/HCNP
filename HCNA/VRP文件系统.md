@@ -140,16 +140,90 @@ Info: Deleting file flash:/dhcp/mm123.txt...succeed.
 
 ![1595915647692](VRP文件系统.assets/1595915647692.png)
 
-| 命令                  | 描述         |
-| --------------------- | ------------ |
-| save                  | 保存配置文件 |
-| compare configuration | 比较配置文件 |
-|                       |              |
+| 命令                      | 描述                 |
+| ------------------------- | -------------------- |
+| save                      | 保存配置文件         |
+| compare configuration     | 比较配置文件         |
+| reset saved-configuration | 重置配置文件         |
+| reboot                    | 重启                 |
+| dis startup               | 查看系统启动参数配置 |
+|                           |                      |
+| format flash              | 格式化               |
 
 ```bash
 <mm>compare configuration							## 比较配置文件
  The current configuration is the same as the next startup configuration file.	## 配置文件相同
+<mm>save										   ## 保存配置文件
+  The current configuration will be written to the device. 
+  Are you sure to continue? (y/n)[n]:y
+  It will take several minutes to save configuration file, please wait......
+  Configuration file had been saved successfully
+  Note: The configuration file will take effect after being activated
 <mm>
+<mm>reset saved-configuration 						## 重置配置文件
+This will delete the configuration in the flash memory.
+
+The device configuratio
+ns will be erased to reconfigure.
+
+Are you sure? (y/n)[n]:y
+ Clear the configuration in the device successfully.
+<mm>
+<mm>reboot 											## 重启
+Info: The system is comparing the configuration, please wait.
+Warning: All the configuration will be saved to the next startup configuration. 
+Continue ? [y/n]:n									## 是否还原成之前的配置文件
+System will reboot! Continue ? [y/n]:y
+Info: system is rebooting ,please wait...
+<mm>
+Task FECD Init......Ok
+Task MFPI Init......Ok
+......
+......
+......
+Task GVRP Init......Ok
+Task ADPG Init......Ok
+
+  Press any key to get started
+
+<Huawei>dis sa										## 查看重启配置文件
+<Huawei>dis saved-configurati
+  There is no correct configuration file in FLASH
+<Huawei>
+Huawei>dir
+Directory of flash:/
+
+  Idx  Attr     Size(Byte)  Date        Time(LMT)  FileName 
+    0  drw-              -  Jul 28 2020 05:52:24   dhcp
+    1  -rw-        121,802  May 26 2014 09:20:58   portalpage.zip
+    2  -rw-          2,263  Jul 28 2020 06:51:27   statemach.efs
+    3  -rw-        828,482  May 26 2014 09:20:58   sslvpn.zip		
+    4  -rw-            249  Jul 28 2020 06:16:09   private-data.txt
+    5  drw-              -  Jul 28 2020 05:44:29   m6m6
+    6  -rw-            120  Jul 28 2020 06:46:01   vrpcfg.zip			## 配置文件存储位置
+
+1,090,732 KB total (784,448 KB free)
+<Huawei>
+
+```
+
+### 启动配置文件
+
+```bash
+<Huawei>dis startup 
+MainBoard: 
+  Configured startup system software:        NULL
+  Startup system software:                   NULL
+  Next startup system software:              NULL
+  Startup saved-configuration file:          NULL
+  Next startup saved-configuration file:     NULL
+  Startup paf file:                          NULL
+  Next startup paf file:                     NULL
+  Startup license file:                      NULL
+  Next startup license file:                 NULL
+  Startup patch package:                     NULL
+  Next startup patch package:                NULL
+<Huawei>
 ```
 
 
