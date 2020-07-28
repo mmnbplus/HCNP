@@ -9,7 +9,13 @@
 * 随着VRP版本的更新，VRP支持的特性也越来越多，可根据需求更新VRP版本
 
 ```
+<Huawei>dis ver
+Huawei Versatile Routing Platform Software
 VRP (R) software, Version 5.130 (AR2200 V200R003C00)
+Copyright (C) 2011-2012 HUAWEI TECH CO., LTD
+Huawei AR2220 Router uptime is 0 week, 0 day, 0 hour, 49 minutes
+BKP 0 version information: 
+
 ```
 
 ### VRP命名规范
