@@ -6,6 +6,8 @@
 
 华为网络设备设备的配置文件和VRP系统文件都保存在物理存储介质中，所以文件系统是VRP正常运行的基础。只有掌握了对文件系统的基础操作，网络工程师才能对设备的配置文件和VRP系统文件进行高效的管理。
 
+## 文件管理
+
 ![1595909916946](VRP文件系统.assets/1595909916946.png)
 
 ```bash
@@ -134,7 +136,21 @@ Info: Deleting file flash:/dhcp/mm123.txt...succeed.
 
 ```
 
+## 配置文件保存
+
 ![1595915647692](VRP文件系统.assets/1595915647692.png)
+
+| 命令                  | 描述         |
+| --------------------- | ------------ |
+| save                  | 保存配置文件 |
+| compare configuration | 比较配置文件 |
+|                       |              |
+
+```bash
+<mm>compare configuration							## 比较配置文件
+ The current configuration is the same as the next startup configuration file.	## 配置文件相同
+<mm>
+```
 
 
 
