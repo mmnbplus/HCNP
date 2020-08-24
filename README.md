@@ -12,3 +12,4 @@ HCNA视频地址 https://www.bilibili.com/video/BV1Dg4y187bZ
 
 我的B站地址： https://space.bilibili.com/309103931 
 
+最近更新停滞，将在9月15号开始更新
